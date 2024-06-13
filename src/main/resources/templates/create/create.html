@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Transaction</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+<div class="container">
+    <h2>Add New Transaction</h2>
+    <form id="transactionForm">
+        <div class="form-group">
+            <label for="transactionId">Transaction ID:</label>
+            <input type="text" id="transactionId" required>
+        </div>
+        <div class="form-group">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" required>
+        </div>
+        <div class="form-group">
+            <label for="serviceType">Service Type:</label>
+            <select id="serviceType" required>
+                <option value="Land">Land</option>
+                <option value="House and Land">House and Land</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="transactionDate">Transaction Date:</label>
+            <input type="date" id="transactionDate" required>
+        </div>
+        <div class="form-group">
+            <label for="unitPrice">Unit Price (VND/m2):</label>
+            <input type="number" id="unitPrice" min="500000" required>
+        </div>
+        <div class="form-group">
+            <label for="area">Area (m2):</label>
+            <input type="number" id="area" min="20" required>
+        </div>
+        <button type="button" onclick="addTransaction()">Add Transaction</button>
+    </form>
+    <div id="message"></div>
+</div>
+
+<script src="create.js"></script>
+</body>
+</html>
+
